@@ -1,16 +1,13 @@
-<h1>Seja Bem Vindo ao Curso Angular</h1>
-<h5 class="card-title">
-  {{ nomeProduto | uppercase }}
-</h5>
-<a href="#" class="btn btn-primary float-right"> {{ precoProduto | currency:'BRL' :'symbol'}}</a>
-<p class = "card-text"> Identificação: {{idProduto | number: '2.0-0'}} <br>
-Validade : {{dataValidade | date : 'shortDate'}}</p>
+<h1>Seja bem vindo ao curso de Angular</h1>
 
-<div class="row">
-<div class="col">
-  <img class = "img-fluid" src="assets/img/logo_horacio.png"/>
-</div>
-<div class="col">
-  <img class= "img-fluid" src="assets/img/crud.png"/>
-</div>
+<h4 class="text-danger"> {{anuncio}} </h4>
 
+<app-card-produto>
+  [foto]="foto"
+
+[nomeProduto]="nomeProduto"
+[promocao]="promocao"
+[idProduto]="idProduto"
+[dataValidade]="dataValidade"
+[precoProduto]="precoProduto"
+</app-card-produto>
